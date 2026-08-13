@@ -210,18 +210,18 @@
 }
 
 .path-mod-workshop .message.ok {
-    color: #547c22;
-    background-color: #e7f1c3;
+    color: var(--bs-success-text-emphasis);
+    background-color: var(--bs-state-success-bg);
 }
 
 .path-mod-workshop .message.error {
-    color: #dd0221;
-    background-color: #ffd3d9;
+    color: var(--bs-danger-text-emphasis);
+    background-color: var(--bs-state-danger-bg);
 }
 
 .path-mod-workshop .message.info {
-    color: #1666a9;
-    background-color: #d2ebff;
+    color: var(--bs-info-text-emphasis);
+    background-color: var(--bs-state-info-bg);
 }
 
 /**
@@ -239,18 +239,18 @@
 }
 
 .path-mod-workshop .allocation-init-results .ok {
-    color: #547c22;
-    background-color: #e7f1c3;
+    color: var(--bs-success-text-emphasis);
+    background-color: var(--bs-state-success-bg);
 }
 
 .path-mod-workshop .allocation-init-results .error {
-    color: #dd0221;
-    background-color: #ffd3d9;
+    color: var(--bs-danger-text-emphasis);
+    background-color: var(--bs-state-danger-bg);
 }
 
 .path-mod-workshop .allocation-init-results .info {
-    color: #1666a9;
-    background-color: #d2ebff;
+    color: var(--bs-info-text-emphasis);
+    background-color: var(--bs-state-info-bg);
 }
 
 .path-mod-workshop .allocation-init-results .debug {
