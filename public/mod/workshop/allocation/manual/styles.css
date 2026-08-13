@@ -8,7 +8,7 @@
 }
 
 .path-mod-workshop .manual-allocator .allocations tbody tr:nth-of-type(odd) {
-    background-color: #eee;
+    background-color: var(--bs-secondary-bg);
 }
 
 .path-mod-workshop .manual-allocator .allocations tbody tr:nth-of-type(odd).highlightreviewerof,
@@ -32,6 +32,13 @@
     background-color: #fff3d2;
 }
 
+/* The highlight marks the reviewer being hovered, so the tint keeps its light value and takes
+   the matching state colour in dark, where body text on the light tint is 1.18:1. */
+[data-bs-theme="dark"] .path-mod-workshop .manual-allocator .allocations .highlightreviewedby .reviewedby,
+[data-bs-theme="dark"] .path-mod-workshop .manual-allocator .allocations .highlightreviewerof .reviewerof {
+    background-color: var(--bs-state-warning-bg);
+}
+
 .path-mod-workshop .manual-allocator .allocations tr td {
     vertical-align: top;
     padding: 5px;
@@ -46,8 +53,8 @@
 }
 
 .path-mod-workshop .manual-allocator .allocations tr td.peer {
-    border-left: 1px solid #ccc;
-    border-right: 1px solid #ccc;
+    border-left: 1px solid var(--bs-border-color);
+    border-right: 1px solid var(--bs-border-color);
 }
 
 .path-mod-workshop .manual-allocator .allocations .reviewedby .info,
@@ -56,6 +63,15 @@
     font-size: 80%;
     color: #888;
     font-style: italic;
+}
+
+/* #888 is far lighter than any secondary text property resolves to in light mode, so the
+   literal stays and only dark is corrected. On the dark row stripe it would otherwise fall
+   below AA. */
+[data-bs-theme="dark"] .path-mod-workshop .manual-allocator .allocations .reviewedby .info,
+[data-bs-theme="dark"] .path-mod-workshop .manual-allocator .allocations .peer .info,
+[data-bs-theme="dark"] .path-mod-workshop .manual-allocator .allocations .reviewerof .info {
+    color: var(--bs-secondary-color);
 }
 
 .path-mod-workshop .manual-allocator .allocations .peer .submission {
